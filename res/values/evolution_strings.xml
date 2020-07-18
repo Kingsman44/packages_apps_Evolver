@@ -1358,11 +1358,16 @@
     <string name="power_menu_bg_filter_grayscale">Grayscale</string>
     <string name="power_menu_bg_filter_tint">Accent tinted</string>
     <string name="power_menu_bg_filter_blur">Blur</string>
-    <stringname="power_menu_bg_filter_grayblur">Grayscale and blurred</string> 
+    <string name="power_menu_bg_filter_grayblur">Grayscale and blurred</string> 
     <string name="power_menu_bg_filter_tinted_blur">Accent Tinted and blurred</string>
 
     <!-- Powermunu Background -->
     <string name="power_menu_bg_title">Background Filter</string>
     <string name="power_menu_bg_summary">Enables Custom filter when powermenu is active</string>
     <string name="power_menu_bg_style_title">Filter Type</string>
+
+    <!-- Volume panel Hide Things-->
+    <string name="volume_title">volume panel</string>
+    <string name="hide_things_volumepanel_title">Hide Things below volume panel</string>
+    <string name="hide_things_volumepanel_summary">Hide Settings and Ringer Container below volume panel</string>
 </resources>
