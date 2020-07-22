@@ -1372,4 +1372,11 @@
     <string name="volume_title">volume panel</string>
     <string name="hide_things_volumepanel_title">Hide Things below volume panel</string>
     <string name="hide_things_volumepanel_summary">Hide Settings and Ringer Container below volume panel</string>
+
+    <!-- Switch styles -->
+    <string name="switch_style_title">Switch Styles</string>
+    <string name="switch_default">Default</string>
+    <string name="switch_oneplus">OnePlus</string>
+    <string name="switch_narrow">Narrow</string>
+    <string name="switch_contained">Contained</string>
 </resources>
