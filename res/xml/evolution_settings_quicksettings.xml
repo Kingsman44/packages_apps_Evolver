@@ -46,6 +46,12 @@
         android:entryValues="@array/smart_pulldown_values"
         android:persistent="false" />
 
+    <com.evolution.settings.preference.SystemSettingSwitchPreference
+        android:key="dismiss_all_button"
+        android:title="@string/enable_clear_all_button"
+        android:summary="@string/enable_clear_all_button_summary"
+        android:defaultValue="true" />
+
     <PreferenceCategory
         android:key="qs_header_category"
         android:title="@string/qs_header_title">
