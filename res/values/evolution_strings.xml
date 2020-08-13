@@ -1078,6 +1078,7 @@
     <string name="qs_tint_off">Off</string>
     <string name="qs_tint_random">Random Tint</string>
     <string name="qs_tint_accent">Accent Tint</string>
+    <string name="qs_disco_mode">Qs Disco Mode</string>
 
     <!-- Option to enable/disable scrolling cache -->
     <string name="pref_scrollingcache_title">Scrolling cache</string>
