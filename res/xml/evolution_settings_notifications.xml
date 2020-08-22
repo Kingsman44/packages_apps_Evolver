@@ -40,6 +40,13 @@
         android:summary="@string/alert_slider_notifications_summary"
         android:defaultValue="true" />
 
+    <com.evolution.settings.preference.SystemSettingSwitchPreference
+        android:key="synthos_center_notification_headers"
+        android:title="@string/synthos_center_notification_headers_title"
+        android:summary="@string/synthos_center_notification_headers_summary"
+        android:dependency="notification_headers"
+        android:defaultValue="true" />
+
     <PreferenceCategory
         android:title="@string/pulse_ambient_category_title">
 
