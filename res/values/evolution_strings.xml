@@ -1407,4 +1407,7 @@
 
     <string name="synthos_center_notification_headers_title">Center notification headers</string>
     <string name="synthos_center_notification_headers_summary">Whether to Center R style notification headers</string>
+
+    <string name="brightness_slider_qs_unexpanded">MIUI style brightness slider (beta)</string>
+    <string name="brightness_slider_qs_unexpanded_summary">Shows brightness slider below qs panel</string>
 </resources>
