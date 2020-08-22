@@ -64,6 +64,12 @@
             android:entryValues="@array/volume_panel_values"
             android:defaultValue="@string/volume_panel_miui_val" />
 
+        <com.evolution.settings.preference.SystemSettingSwitchPreference
+            android:key="synthos_music_volume_panel_text"
+            android:summary="@string/synthos_music_volume_panel_text_summary"
+            android:title="@string/synthos_music_volume_panel_text_title"
+            android:defaultValue="true" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
