@@ -49,6 +49,7 @@ import com.android.settings.search.Indexable;
 import com.android.settingslib.search.SearchIndexable;
 
 import com.evolution.settings.preference.SystemSettingMasterSwitchPreference;
+import com.evolution.settings.preference.CustomSeekBarPreference;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -67,6 +68,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     private static final String STATUS_BAR_BATTERY_TEXT_CHARGING = "status_bar_battery_text_charging";
     private static final String BATTERY_PERCENTAGE_HIDDEN = "0";
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
+    private static final String CUSTOM_STATUSBAR_HEIGHT = "custom_statusbar_height";
 
     private static final int BATTERY_STYLE_Q = 0;
     private static final int BATTERY_STYLE_DOTTED_CIRCLE = 1;
@@ -79,6 +81,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     private SystemSettingMasterSwitchPreference mBatteryBar;
     private SwitchPreference mBatteryCharging;
     private SwitchPreference mShowLteFourGee;
+    private CustomSeekBarPreference mCustomStatusbarHeight;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -87,6 +90,12 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.evolution_settings_statusbar);
         PreferenceScreen prefSet = getPreferenceScreen();
         final ContentResolver resolver = getActivity().getContentResolver();
+
+        mCustomStatusbarHeight = (CustomSeekBarPreference) findPreference(CUSTOM_STATUSBAR_HEIGHT);
+        int customStatusbarHeight = Settings.System.getIntForUser(getActivity().getContentResolver(),
+                Settings.System.CUSTOM_STATUSBAR_HEIGHT, getResources().getDimensionPixelSize(com.android.internal.R.dimen.status_bar_height), UserHandle.USER_CURRENT);
+        mCustomStatusbarHeight.setValue(customStatusbarHeight);
+        mCustomStatusbarHeight.setOnPreferenceChangeListener(this);
 
         mShowLteFourGee = findPreference(SHOW_LTE_FOURGEE);
         mShowLteFourGee.setChecked((Settings.System.getInt(getContentResolver(),
@@ -124,6 +133,11 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
             boolean enabled = (boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.BATTERY_BAR_LOCATION, enabled ? 1 : 0);
+            return true;
+        } else if (preference == mCustomStatusbarHeight) {
+            int value = (Integer) newValue;
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.CUSTOM_STATUSBAR_HEIGHT, value, UserHandle.USER_CURRENT);
             return true;
         }
         return false;

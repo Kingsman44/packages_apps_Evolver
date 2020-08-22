@@ -1398,4 +1398,7 @@
     <!-- OOS clear all button -->
     <string name="enable_clear_all_button">Replace clear all text with nice button</string>
     <string name="enable_clear_all_button_summary">Show clear all notifications button in quick settings instead of default text one</string>
+
+    <!-- Custom statusbar hight -->
+    <string name="custom_statusbar_height_tile">Statusbar Height</string>
 </resources>
